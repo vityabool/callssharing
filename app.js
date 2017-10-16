@@ -7,8 +7,7 @@ var bodyParser = require('body-parser');
 //var mustacheExpress = require('mustache-express');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var list = require('./routes/list');
+var help = require('./routes/help');
 var calls = require('./routes/calls');
 
 var app = express();
@@ -29,8 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/list', list);
+app.use('/help', help);
 app.use('/calls', calls);
 
 // catch 404 and forward to error handler

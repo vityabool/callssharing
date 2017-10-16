@@ -1,6 +1,10 @@
-extends layout
+extends _bootstrap
 
-block content
++navbar("MySafety calls log","dropdown_menu","inverse")
+  +nav_item("calls") Calls
+  +nav_item("help") Help
+
+block body
   h1= message
   h2= error.status
   pre #{error.stack}

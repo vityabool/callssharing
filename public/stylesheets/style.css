@@ -1,8 +1,37 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.panel {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
 }
 
-a {
-  color: #00B7FF;
+.a {
+  background-color: burlywood;
+  align-self: center;
+  align-content: center;
+}
+
+.inp {
+  min-width: 150px;
+  border-color: #ECECEC;
+  width: 75%;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.sub {
+  background-color: #EEEEEE;
+  border-color: #ECECEC;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.form {
+
+}
+
+.aud {
+  width: 100%;
+  border-color: #C0C0C0;
+  border-style: solid;
+  border-width: 1px;
 }

@@ -1,0 +1,14 @@
+extends _bootstrap
+
+block body
+
+  +navbar("MySafety calls log","dropdown_menu","inverse")
+    +nav_item("calls") Calls
+    +nav_item("help", "active") Help
+
+  +panel-info("mySafety calls lookup")
+    p Send questions to vtsykunov@hotmail.com
+    p Files with calls are sorted in the following structure:
+    p DATE/FILE_NAME
+    p Example: 2017-10-16/2017-10-16 22:34
+    p Use filter to look for the spesific date and time

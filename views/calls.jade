@@ -1,7 +1,24 @@
 extends _bootstrap
 block body
     +navbar("MySafety calls log","dropdown_menu","inverse")
-        +nav_item("list") List
         +nav_item("calls","active") Calls
-        +nav_item("users") Users
-        +nav_item("index") Index
+        +nav_item("help") Help
+
+    - var list = [];
+    for f in filesList 
+        - list.push(f);
+    div.panel
+        +panel-info("Set filter. Example: 2017-10-16")
+            form(action="/calls", method="get" class="form")
+                    input(type="text", name="search", value=searchPrefix, class="inp")
+                    input(type="submit", class="sub", value="Search")
+
+    div.panel
+        +panel-primary("List of calls")
+            +list-group-links(list)
+            a(href=nextToken) Next
+
+    div.panel
+         +panel-success("Player")
+            audio(controls='', autoplay='', class="aud" id="play")
+                source(src='', type='audio/mpeg')
